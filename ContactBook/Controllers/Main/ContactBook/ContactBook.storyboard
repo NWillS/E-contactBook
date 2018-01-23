@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vEP-CC-QOs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--連絡帳-->
+        <scene sceneID="Sj9-Ud-CF8">
+            <objects>
+                <viewController id="qFy-Cl-Dhn" customClass="ContactBookViewController" customModule="ContactBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jkj-bh-fe8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zZp-lf-0WB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="jw0-nU-DRA">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contactBookCell" id="hGJ-8x-QJU">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hGJ-8x-QJU" id="fw1-9N-KWq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zZp-lf-0WB" firstAttribute="leading" secondItem="APz-Cj-5UI" secondAttribute="leading" id="F9m-WF-yyk"/>
+                            <constraint firstItem="APz-Cj-5UI" firstAttribute="bottom" secondItem="zZp-lf-0WB" secondAttribute="bottom" id="aLX-L5-6N6"/>
+                            <constraint firstItem="APz-Cj-5UI" firstAttribute="trailing" secondItem="zZp-lf-0WB" secondAttribute="trailing" id="rkB-X8-avg"/>
+                            <constraint firstItem="zZp-lf-0WB" firstAttribute="top" secondItem="APz-Cj-5UI" secondAttribute="top" id="vSG-PY-sEL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="APz-Cj-5UI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="連絡帳" id="dJA-QK-Tbc"/>
+                    <connections>
+                        <outlet property="contactBookTableView" destination="zZp-lf-0WB" id="GfC-kr-1wO"/>
+                        <outlet property="indicator" destination="jw0-nU-DRA" id="In3-DF-WEV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKb-dM-oxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186" y="114"/>
+        </scene>
+        <!--連絡帳-->
+        <scene sceneID="qVs-a4-Yyk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vEP-CC-QOs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="連絡帳" id="gCb-DP-hRq"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gpl-2x-VPY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qFy-Cl-Dhn" kind="relationship" relationship="rootViewController" id="ucD-bI-gLQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0GK-V7-1BY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-537" y="114"/>
+        </scene>
+    </scenes>
+</document>
